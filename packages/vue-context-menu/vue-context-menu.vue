@@ -18,6 +18,7 @@
           :key="key"
           @click="handlerEvent(item.event)"
           :class="{ disabled: item.disabled }"
+          :style="{ color: color }"
           >{{ item.name }}</a
         >
       </section>
@@ -27,7 +28,7 @@
 
 <script>
 export default {
-  name: "vue-context-menu",
+  name: "v-context",
   data() {
     return {
       triggerShowFn: () => {},
@@ -52,6 +53,11 @@ export default {
     menuName: {
       type: String,
       default: "menu",
+    },
+    //菜单字体颜色
+    color: {
+      type: String,
+      default: "#1a1a1a",
     },
   },
   created() {
@@ -195,7 +201,6 @@ a.disabled {
   font-size: 14px;
   text-align: center;
   display: block;
-  color: #1a1a1a !important;
   padding: 6px 15px;
   text-decoration: none;
 }

@@ -1,38 +1,55 @@
 <!--
- * @Author: Jason Jason
+ * @Author: Java-css
  * @Date: 2022-09-15 10:46:08
- * @LastEditors: Jason Jason
- * @LastEditTime: 2022-09-15 17:16:08
- * @FilePath: \context-menu\README.md
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 
 # vue-context-menu
 
-## Project setup
+## 安装组件
 
 ```
-npm install
+npm i v-context
 ```
 
-### Compiles and hot-reloads for development
+## 注册组件
+
+## 使用
 
 ```
-npm run serve
+    <v-context
+      :target="target"
+      :show="userShow"
+      :menu="menu"
+      @update:show="(show) => (userShow = show)"
+    />
 ```
 
-### Compiles and minifies for production
+## props 参数
 
 ```
-npm run build
+
+ 字段  | 说明  | 类型  | 默认值
+ ---- | ----- | ------
+ target  | 指定绑定右键的元素 | Element | null
+ show  | 右键菜单显隐 | Boolean | false
+ menuName  | 右键菜单列表名字 | String | menu
+ menu  | 右键菜单显隐 | Array | []
+ color  | 右键菜字体颜色 | String | #1a1a1a
 ```
 
-### Lints and fixes files
+## Events 事件
 
 ```
-npm run lint
+
+ 名称  | 说明  | 参数
+ ---- | ----- | ------
+ update:show  | 显示/隐藏
+ contextMenuHandler  | 显示/隐藏 | (e, data) 接收两个参数，1. 当前事件对象 2. 回调参数
 ```
 
-### Customize configuration
+## Tips
 
-See [Configuration Reference](https://cli.vuejs.org/config/).
+```
+1、若target是指定元素，可以使用 $refs来访问，请在父组件mounted 之后获取。
+2、若需在外部自主控制菜单使用时,target置为null,调取contextMenuHandler事件
+```

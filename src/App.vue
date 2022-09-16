@@ -1,6 +1,10 @@
+<!--
+ * @Author: java-css
+ * @Description: 右键菜单测试用例
+-->
 <template>
   <div id="app">
-    <vue-context-menu
+    <v-context
       :target="target"
       :show="userShow"
       :menu="menu"

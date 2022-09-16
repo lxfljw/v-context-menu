@@ -1,6 +1,6 @@
 {
   "name": "v-context",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "基于 Vue 的上下文鼠标右键",
   "main": "lib/v-context.umd.min.js",
   "keyword": "v-context context-menu contextmenu contextMenu vue-context-menu v-context-menu",
