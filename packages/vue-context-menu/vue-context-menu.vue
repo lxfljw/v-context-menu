@@ -136,7 +136,7 @@ export default {
     clickDocumentHandler() {
       this.$emit("update:show", false);
     },
-    // 右键事件事件处理
+    // 右键事件事件处理,data外部主动显示右键菜单时，传进来的值，这个值在点击菜单某一项时传入
     contextMenuHandler(e, data) {
       this.$nextTick(() => {
         const windowH = this.$$parent.$el.clientHeight;
