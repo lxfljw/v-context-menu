@@ -29,7 +29,7 @@ npm i v-context
 ```
 
  字段  | 说明  | 类型  | 默认值
- ---- | ----- | ------
+ ---- | ----- | ------| ----- |
  target  | 指定绑定右键的元素 | Element | null
  show  | 右键菜单显隐 | Boolean | false
  menuName  | 右键菜单列表名字 | String | menu
